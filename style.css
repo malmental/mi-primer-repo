@@ -7,3 +7,205 @@ body {
     font-family: 'JetBrains Mono', sans-serif;
     background-color:lightpink;
 }
+
+h1 {font-size: 5em;}
+h2 {font-size: 4em;}
+h3 {font-size: 3em;}
+p {font-size: 1.3em;}
+ul {list-style: none;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: 0px;
+    box-shadow: 9px 8px 0px darkgray;
+    color: white;
+    background-color:slateblue;
+}
+
+button:hover{
+    background-color: violet;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header {
+    color:;
+    background-color: rosybrown;
+}
+
+header .logo{
+    padding: 25px 30px;
+    font-weight: bold;
+    font-size: 6em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a {
+    padding: 5px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover {
+    color:darkslateblue;
+}
+
+#hero {
+    background-color: indianred;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 40em;
+    color: antiquewhite;
+    background-image: url(media/ojo1.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero button{
+    margin-top: 3em;
+}
+
+#informacion .container {
+    display: flex;
+    text-align: center;
+    flex-direction: left;
+    align-items: center;
+    padding: 200px 200px;
+}
+
+#nuestros-programas h2 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
+
+#informacion p {
+    display: block;
+    padding-top: 3em;
+    
+}
+
+#trabajos {
+    background-color: darkgrey;
+    padding: 100px 100px;
+    
+}
+
+#trabajos h2{
+    margin-bottom: 0.5em;
+    font-size: 4em;
+}
+
+#trabajos p {
+    display: block;
+}
+
+#trabajos .cartas{
+    
+    align-items: center;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+#trabajos button {
+    display: flex;
+    margin-top: 2em;
+}
+
+.carta-1 {
+    color:seashell ;
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url(media/ojo2.png);
+    background-size: 1400px;
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.carta-2 {
+    color: seashell;
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(media/ojo8.png);
+    background-size: 1400px;
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* Asegúrate que termine con punto y coma */
+}
+
+#contacto .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 250px 12px;
+}
+
+#contacto li {
+    margin: 20px 0px;
+}
+
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:gainsboro;
+    height: 50em;
+}
+
+#final h2{
+    font-size: 6em;
+    margin-bottom: 2vw;
+}
+
+#final button {
+    font-size: 3em;
+}
+
+footer {
+    background-color:darkkhaki;
+}
+
+footer p {
+    color:azure;
+    padding: 12px;
+}
+
+footer.container {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
