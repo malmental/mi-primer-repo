@@ -35,20 +35,20 @@ button:hover{
 }
 
 header {
-    color:;
     background-color: rosybrown;
 }
 
 header .logo{
     padding: 25px 30px;
     font-weight: bold;
-    font-size: 6em;
+    font-size: 4em;
 }
 
 header .container{
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-size: 1.2em;
 }
 
 header nav {
@@ -70,6 +70,7 @@ header a:hover {
 }
 
 #hero {
+    font-size: 2vw;
     background-color: indianred;
     display: flex;
     align-items: center;
@@ -84,10 +85,13 @@ header a:hover {
 }
 
 #hero button{
+    font-size: 1.8em;
+    padding: 15px 40px;
     margin-top: 3em;
 }
 
 #informacion .container {
+    font-size: 1em;
     display: flex;
     text-align: center;
     flex-direction: left;
@@ -95,30 +99,49 @@ header a:hover {
     padding: 200px 200px;
 }
 
-#nuestros-programas h2 {
+#informacion h2 {
     font-size: 4em;
     margin-bottom: 0.5em;
 }
 
 #informacion p {
-    display: block;
+    font-size: 1.1em;
+    line-height: 1.6;
     padding-top: 3em;
-    
 }
 
 #trabajos {
     background-color: darkgrey;
-    padding: 100px 100px;
-    
+    padding: 50px 20px;
 }
 
-#trabajos h2{
-    margin-bottom: 0.5em;
+#trabajos .container {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 0 16px;
+}
+
+#trabajos h2 {
+    margin-bottom: 1em;
     font-size: 4em;
+    text-align: center;
 }
 
 #trabajos p {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
     display: block;
+}
+
+#trabajos .trabajos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: stretch;
+    width: 100%;
 }
 
 #trabajos .cartas{
@@ -132,46 +155,59 @@ header a:hover {
 }
 
 #trabajos button {
+    display: inline-block;
+    margin-top: 1.5em;
+    align-self: center;
+}
+
+.carta-1 button,
+.carta-2 button {
+    margin-top: auto;
+    width: auto;
+}
+
+.carta-1,
+.carta-2 {
+    font-size: 1em;
+    color: seashell;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 2.5em 1.5em;
     display: flex;
-    margin-top: 2em;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 350px;
+    width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
 
 .carta-1 {
-    color:seashell ;
     background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-    url(media/ojo2.png);
-    background-size: 1400px;
-    padding: 4em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url(media/ojo2.png);
 }
 
 .carta-2 {
-    color: seashell;
     background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(media/ojo8.png);
-    background-size: 1400px;
-    padding: 4em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    /* Asegúrate que termine con punto y coma */
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(media/ojo3.png);
 }
 
 #contacto .container {
+    font-size: 2.5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 250px 12px;
+    width: clamp(200px, 100%, 1000px);
 }
 
 #contacto li {
+    font-size: 1.2em;
     margin: 20px 0px;
 }
 
@@ -186,12 +222,13 @@ header a:hover {
 }
 
 #final h2{
-    font-size: 6em;
+    font-size: 5em;
     margin-bottom: 2vw;
 }
 
 #final button {
-    font-size: 3em;
+    font-size: 2.0em;
+    padding: 25px 60px;
 }
 
 footer {
@@ -208,4 +245,104 @@ footer.container {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+}
+
+/* Media Query para pantallas de 720px o más */
+@media (min-width: 720px) {
+    /* Hero section optimizado */
+    #hero {
+        height: 50em;
+    }
+
+    #hero h1 {
+        font-size: 7em;
+    }
+
+    #hero button {
+        font-size: 1.8em;
+        padding: 25px 60px;
+    }
+
+    header .container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .logo{
+        font-size: 5em;
+        padding: 25px 40px;
+    }
+
+    header nav {
+        flex-direction: row;
+        padding-bottom: 0;
+    }
+
+    header a {
+        padding: 5px 15px;
+    }
+
+    #informacion .container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 100px 50px;
+        gap: 50px;
+    }
+
+    #informacion .texto {
+        flex: 1;
+        max-width: 600px;
+    }
+
+    /* Sección de trabajos optimizada */
+    #trabajos {
+        padding: 80px 50px;
+    }
+
+    #trabajos .trabajos {
+        flex-direction: row;
+        gap: 30px;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: nowrap;
+    }
+
+    .carta-1,
+    .carta-2 {
+        font-size: 1em;
+        flex: 1 1 0;
+        max-width: 500px;
+        min-height: 400px;
+        padding: 3em 2em;
+    }
+
+    #contacto .container {
+        font-size: clamp(1em, 2.5vw, 2em);
+        padding: 150px 50px;
+    }
+
+    #contacto ul {
+        font-size: 1em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    #contacto li {
+        margin: 0;
+    }
+
+    #final button {
+        font-size: 2.5em;
+        padding: 25px 60px;
+
+    }
+
+    #final h2{
+        font-size: 6em;
+    }
 }
