@@ -39,7 +39,6 @@ header {
 }
 
 header .logo{
-    padding: 25px 30px;
     font-weight: bold;
     font-size: 4em;
 }
@@ -82,6 +81,7 @@ header a:hover {
     background-image: url(media/ojo1.png);
     background-size: cover;
     background-position: center center;
+    padding-top: 4em;
 }
 
 #hero button{
@@ -90,13 +90,28 @@ header a:hover {
     margin-top: 3em;
 }
 
+#informacion {
+
+}
+
 #informacion .container {
+    text-align: center;
     font-size: 1em;
     display: flex;
-    text-align: center;
-    flex-direction: left;
+    flex-direction: row;
     align-items: center;
-    padding: 200px 200px;
+    padding: 100px 12px;
+}
+
+#informacion .img-container {
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+         url('media/retrato.png');
+    background-size: cover;
+    background-position: center center;
+    width: 100px;
+    height: 600px;
+    border-radius: 10px;
 }
 
 #informacion h2 {
@@ -247,16 +262,22 @@ footer.container {
     align-items: flex-end;
 }
 
-/* Media Query para pantallas de 720px o más */
+/* ⊢----------Media Query para pantallas de 720px o más----------⊣ */
+
 @media (min-width: 720px) {
+    header {
+        position: fixed;
+        width: 100%;
+    }
+
     #hero {
         height: 50em;
     }
 
     #hero h1 {
+        padding-top: 2em;
         font-size: 6.5em;
     }
-
 
     header .container {
         flex-direction: row;
@@ -266,24 +287,30 @@ footer.container {
 
     header .logo{
         font-size: 5em;
-        padding: 25px 40px;
+        padding: 20px;
     }
 
     header nav {
         flex-direction: row;
         padding-bottom: 0;
+        padding-right: 3   0px;
     }
 
     header a {
         padding: 5px 15px;
     }
 
-    #informacion .container {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        padding: 300px 50px;
+    #informacion .container{
+        padding: 200px 250px;
         gap: 50px;
+    }
+
+    #informacion .img-container {
+        background-image: url(media/retrato.png);
+        background-size: cover;
+        background-position: center center;
+        margin: 0px;
+        width: 1000px;
     }
 
     /* Sección de trabajos optimizada */
@@ -297,6 +324,7 @@ footer.container {
         justify-content: center;
         align-items: stretch;
         flex-wrap: nowrap;
+        display: flex;
     }
 
     .carta-1,
@@ -306,11 +334,14 @@ footer.container {
         max-width: 500px;
         min-height: 400px;
         padding: 3em 2em;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     #contacto .container {
-        font-size: clamp(1em, 2vw, 2em);
-        padding: 300px 50px;
+        font-size: 1.6em
     }
 
     #contacto ul {
@@ -328,12 +359,12 @@ footer.container {
     }
 
     #final button {
-        font-size: 2.5em;
+        font-size: 2em;
         padding: 25px 60px;
 
     }
 
-    #final h2{
-        font-size: 6em;
+    #final h2{;
+        font-size: 5em;
     }
 }
