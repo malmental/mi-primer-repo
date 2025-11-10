@@ -17,7 +17,7 @@ ul {list-style: none;}
 button{
     font-size: 1.5em;
     font-weight: bold;
-    padding: 10px 30px;
+    padding: 20px 40px;
     border-radius: 5px;
     border: 0px;
     box-shadow: 9px 8px 0px darkgray;
@@ -70,7 +70,7 @@ header a:hover {
 }
 
 #hero {
-    font-size: 2vw;
+    font-size: 1em;
     background-color: indianred;
     display: flex;
     align-items: center;
@@ -86,7 +86,7 @@ header a:hover {
 
 #hero button{
     font-size: 1.8em;
-    padding: 15px 40px;
+    padding: 20px 40px;
     margin-top: 3em;
 }
 
@@ -197,18 +197,17 @@ header a:hover {
 }
 
 #contacto .container {
-    font-size: 2.5vw;
+    font-size: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 250px 12px;
-    width: clamp(200px, 100%, 1000px);
 }
 
 #contacto li {
     font-size: 1.2em;
-    margin: 20px 0px;
+    margin: 20px 0px;;
 }
 
 #final{
@@ -222,11 +221,12 @@ header a:hover {
 }
 
 #final h2{
-    font-size: 5em;
+    font-size: 4.5em;
     margin-bottom: 2vw;
 }
 
 #final button {
+    margin-top: 2em;
     font-size: 2.0em;
     padding: 25px 60px;
 }
@@ -249,19 +249,14 @@ footer.container {
 
 /* Media Query para pantallas de 720px o más */
 @media (min-width: 720px) {
-    /* Hero section optimizado */
     #hero {
         height: 50em;
     }
 
     #hero h1 {
-        font-size: 7em;
+        font-size: 6.5em;
     }
 
-    #hero button {
-        font-size: 1.8em;
-        padding: 25px 60px;
-    }
 
     header .container {
         flex-direction: row;
@@ -287,13 +282,8 @@ footer.container {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        padding: 100px 50px;
+        padding: 300px 50px;
         gap: 50px;
-    }
-
-    #informacion .texto {
-        flex: 1;
-        max-width: 600px;
     }
 
     /* Sección de trabajos optimizada */
@@ -319,8 +309,8 @@ footer.container {
     }
 
     #contacto .container {
-        font-size: clamp(1em, 2.5vw, 2em);
-        padding: 150px 50px;
+        font-size: clamp(1em, 2vw, 2em);
+        padding: 300px 50px;
     }
 
     #contacto ul {
@@ -329,10 +319,11 @@ footer.container {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 30px;
     }
 
     #contacto li {
+        font-size: clamp(20px, 50%, 20px);
+        padding-top: 2em;
         margin: 0;
     }
 
