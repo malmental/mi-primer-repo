@@ -14,9 +14,6 @@ IT Academy bootcamp FullStack PHP
   ## 📸 Demostración  
   TBA 
 
-  Esta linea es nueva
-  Esta es una nueva linea
-
 >>>⌞ Mal Mentaµ ⌝
 =======
 # mi-primer-repo
