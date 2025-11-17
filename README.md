@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 IT Academy bootcamp FullStack PHP
 
 **Descripción**: Este es mi camino persona hacia el desarrollo de codigo 
@@ -14,3 +15,7 @@ IT Academy bootcamp FullStack PHP
   TBA 
 
 >>>⌞ Mal Mentaµ ⌝
+=======
+# mi-primer-repo
+part of my journey through coding
+>>>>>>> 98dc578153ad0f3fcfde0107d85cc91fa47531ee
