@@ -5,26 +5,28 @@
 }
 
 body {
-    font-family: "Optima", sans-serif;
-    background-image: url('media/header.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-position: center center;
-    padding: 20px;
+    font-family: 'Optima', 'Arial', sans-serif;  
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 header {    
+    background-color: white;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px 30px;
-    margin-bottom: 20px;
-    justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 20;
+    gap: 15px;
 }
-
 
 .logo img {
     height: 100px;
@@ -32,15 +34,11 @@ header {
     display: block;
 }
 
-.logo a {
-    text-decoration: none;
-}
-
 .main-nav ul {
     list-style: none;
-    margin: 0;
-    padding: 30px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 25px;
 }
 
@@ -62,51 +60,86 @@ header {
 
 .social-icons img {
     height: 24px;
-    width: auto;
-    display: block;
-    gap: 25px;
 }
 
 .banner {
-    background-color: #3333331b;
-    padding: 20px 10px;
-    margin-bottom: 20px;
-
-    text-align: center;
+    background-image: url('media/header.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .banner-content {
-    background-color: rgba(0, 0, 0, 0.123);
-    box-shadow:10cm;
-    color: #ff6b6b;
-    font-size: 70px;
-    padding: 400px 30px;
-    margin: 100px;
-}
-
-.main-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-bottom: 20px;
+    color: #ff7b7b;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .content {
-    background-color: rgba(255, 255, 255, 0.700);
-    padding: 40px;
+    background-color: white;
+    padding: 9px;
+}
+
+.articles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
 }
 
 .articles {
-    background-color:rgba(255, 255, 255, 0.700);
-    padding: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    background-color: white;
+}
+
+.article-image-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+
+.article-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-date {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.article-title {
+    background-color: #ff7b7b;
+    padding: 10px 20px;
+}
+
+.article-title h2 {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.article-text {
+    font-size: 14px;
+    column-count: 2;
+    column-gap: 20px;
+    padding: 20px;
+    line-height: 1.6;
 }
 
 .article {
-    background-color: rgba(255, 105, 180, 0.744);
-    padding: 100px 30px;
+
+    padding: 10px 10px;
     flex: 1 1 calc(50% - 10px);
     min-width: 100px;
     margin: 0;
@@ -119,17 +152,15 @@ header {
 }
 
 aside {
-    background-color: rgba(255, 255, 255, 0.711);
-    padding: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.publicidad {
-    font-size: 25px;
+.newsletter {
+    font-size: 15px;
     text-align: center;
-    padding: 30px
+    padding: 15px
 }
 
 footer {
@@ -143,11 +174,28 @@ footer {
 }
 
 @media (min-width: 768px) {
-    header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+        header {
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 30px;
+            justify-content: space-between;
+        }
+    
+        .banner header {
+            background-color: #3333331b;
+            padding: 20px 10px;
+            margin-bottom: 20px;
+    
+        }
+    
+        .banner-content {
+            text-align: center;
+            box-shadow: 10cm;
+            color: #ff6b6b;
+            font-size: 50px;
+            padding: 200px 30px;
+    
+        }
 
     .main-nav {
         flex: 1;
