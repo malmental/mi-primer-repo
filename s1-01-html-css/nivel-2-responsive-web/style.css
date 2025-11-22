@@ -5,7 +5,8 @@
 }
 
 body {
-    font-family: 'Optima', 'Arial', sans-serif;  
+    font-family: 'Optima', 'Arial', sans-serif;
+    background-color: #e8e8e8;
 }
 
 img {
@@ -20,12 +21,13 @@ a {
 }
 
 header {    
-    background-color: white;
-    padding: 20px;
+    background-color: #f5f5f5;
+    padding: 15px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    justify-content: space-between ;
+    gap: 20px;
 }
 
 .logo img {
@@ -73,8 +75,8 @@ header {
 }
 
 .banner-content {
-    color: #ff7b7b;
-    font-size: 2rem;
+    color: #ff7b7bbc;
+    font-size: 3rem;
     text-align: center;
     padding: 0 20px;
 }
@@ -82,6 +84,13 @@ header {
 .content {
     background-color: white;
     padding: 9px;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
 }
 
 .articles-list {
@@ -92,7 +101,16 @@ header {
 }
 
 .articles {
-    background-color: white;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+.article {
+    background-color: #a2a2a286;
+    margin: 0;
 }
 
 .article-image-container {
@@ -111,10 +129,8 @@ header {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
     color: white;
-    padding: 5px 10px;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .article-title {
@@ -124,107 +140,117 @@ header {
 
 .article-title h2 {
     color: white;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 18px;
     letter-spacing: 1px;
 }
 
 .article-text {
-    font-size: 14px;
-    column-count: 2;
     column-gap: 20px;
     padding: 20px;
     line-height: 1.6;
 }
 
-.article {
-
-    padding: 10px 10px;
-    flex: 1 1 calc(50% - 10px);
-    min-width: 100px;
-    margin: 0;
-}
-
-.navegacion {
-
-    padding: 30px;
-    flex-basis: 100%;
+.read-more-link {
+    display: block;
+    padding: 0 20px 20px 20px;
+    color: #666;
+    font-size: 14px;
 }
 
 aside {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    background-color: #d9d9d9;
+    padding: 20px;
+}
+
+.newsletter-title {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 18px;
 }
 
 .newsletter {
-    font-size: 15px;
     text-align: center;
-    padding: 15px
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-text {
+    background-color: rgba(0, 0, 0, 0.099);
+    padding: 20px;
+    margin: 20px 20px;
+    text-align: left;
+    font-size: 13px;
+    color: #1c1c1c;
+    line-height: 1.6;
 }
 
 footer {
-    background-color:cadetblue;
-    padding: 30px;
+    background-color: #d9d9d9;
+    text-align: center;
+    padding: 15px;
+    color: #666;
+    font-size: 13px;
 }
 
 .pie-content {
-    background-color:darkkhaki;
-    padding: 40px 30px;
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-        header {
-            flex-direction: column;
-            align-items: center;
-            padding: 15px 30px;
-            justify-content: space-between;
-        }
-    
-        .banner header {
-            background-color: #3333331b;
-            padding: 20px 10px;
-            margin-bottom: 20px;
-    
-        }
-    
-        .banner-content {
-            text-align: center;
-            box-shadow: 10cm;
-            color: #ff6b6b;
-            font-size: 50px;
-            padding: 200px 30px;
-    
-        }
-
-    .main-nav {
-        flex: 1;
-    }
-
-    .main-nav ul {
-        display: flex;
-        justify-content: center;
-        gap: 55px
-    }
-    
-    .social {
-        flex: 0 1 auto;
         
-    }
-
-    nav {
-        flex: 1 1 auto;
-    }
-
-    .main-wrapper {
+    header {
         flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    /* Tarjetas en 2 columnas */
+    .articles-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .article {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+    .article-text {
+        column-count: 2;
+        column-gap: 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    header {
+        padding: 20px;
+    }
+
+    /* Main + Aside lado a lado */
+    .main-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
     }
 
     .content {
-        flex: 2;
+        flex: 3;
     }
 
     aside {
         flex: 1;
+        max-width: 300px;
+    }
+
+    /* Tarjetas siguen en 2 columnas */
+    .articles-list {
+        gap: 20px;
+    }
+        
+    .article {
+        flex: 1 1 calc(50% - 10px);
     }
 }
